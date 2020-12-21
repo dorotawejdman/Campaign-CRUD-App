@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { CampaignService } from '../share/campaign.service';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
@@ -7,7 +7,6 @@ import { IDropdownSettings } from 'ng-multiselect-dropdown';
   selector: 'app-campaign-form',
   templateUrl: './campaign-form.component.html',
   styleUrls: ['./ng-multiselect.sass','./campaign-form.component.sass'],
-  encapsulation: ViewEncapsulation.None
 })
 export class CampaignFormComponent implements OnInit {
 
