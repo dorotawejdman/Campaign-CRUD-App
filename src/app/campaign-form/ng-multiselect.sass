@@ -162,14 +162,16 @@ $disable-background-color: #eceeef
 .multiselect-item-checkbox input[type='checkbox']:disabled + div:before 
   border-color: #cccccc
 
-
 .multiselect-item-checkbox
-  input[type='checkbox']:disabled:focus
-  + div:before
-  .multiselect-item-checkbox
-  input[type='checkbox']:disabled:hover
-  + div:before 
-  background-color: inherit
+  input[type='checkbox']:disabled:focus + div:before.multiselect-item-checkbox input[type='checkbox']:disabled:hover + div:before 
+    background-color: inherit
+// .multiselect-item-checkbox
+//   input[type='checkbox']:disabled:focus
+//   + div:before
+//   .multiselect-item-checkbox
+//   input[type='checkbox']:disabled:hover
+//   + div:before 
+//   background-color: inherit
 
 
 .multiselect-item-checkbox
