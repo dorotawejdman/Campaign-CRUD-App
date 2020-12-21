@@ -9,3 +9,5 @@ This app containes following components:
 
 * Campaign-service - handles functions shared between components, like editting, adding, deleting, and updating Budget
 * Campaign-class - contains properties of Campaign Object
+
+Check it here -> [link](campaign-management.netlify.app)
