@@ -175,9 +175,8 @@ $disable-background-color: #eceeef
 
 
 .multiselect-item-checkbox
-  input[type='checkbox']:disabled:checked
-  + div:before 
-  background-color: #cccccc
+  input[type='checkbox']:disabled:checked + div:before 
+    background-color: #cccccc
 
 
 .multiselect-item-checkbox input[type='checkbox'] + div:after 
@@ -211,5 +210,5 @@ $disable-background-color: #eceeef
 
 @keyframes borderscale 
   50% 
-    box-shadow: 0 0 0 2px $base-color!important
+  box-shadow: 0 0 0 2px $base-color!important
   
