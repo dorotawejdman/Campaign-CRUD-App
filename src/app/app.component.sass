@@ -1,0 +1,24 @@
+@import '../variables'
+
+.main-container
+    width: 90%
+    margin: auto
+
+.top-container
+    padding: 0 10% 0 10%
+
+    @extend %flex-basic
+
+.bottom-container   
+    padding: 0 10%
+    h2
+        max-width: 75%
+
+@media (min-width:1144px)
+
+    .main-container
+        width: 80%
+
+@media (max-width:712px)
+    .top-container
+        display: block

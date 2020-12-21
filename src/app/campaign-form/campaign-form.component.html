@@ -1,0 +1,46 @@
+<div class="form-container">
+  <h2>Add new Campaign</h2>
+  <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="on">
+    <div class="input-group">
+      <input type="hidden" name="ID" #ID="ngModel" [(ngModel)]="service.inputCampaign.ID">
+        <label>Name:</label>
+        <input required name="Name" #Name="ngModel" [(ngModel)]="service.inputCampaign.Name" maxlength="20">
+        <label>Keywords:</label>
+        <ng-multiselect-dropdown
+          [placeholder]="'choose wisely'"
+          [settings]="dropdownKeywordSettings"
+          [data]="dropdownKeywordList"
+          name="Keywords" 
+          #Keywords="ngModel" 
+          [(ngModel)]="service.inputCampaign.Keywords"
+          required>
+        </ng-multiselect-dropdown>
+        <label>Bid Amonut:</label>
+        <input type="number" required name="BidAmount" #BidAmount="ngModel" [(ngModel)]="service.inputCampaign.BidAmount">
+        <label>Campaign Fund:</label>
+        <input type="number" required name="CampaignFund" #CampaignFund="ngModel" [(ngModel)]="service.inputCampaign.CampaignFund">
+
+    </div>
+    <div class="input-group">
+      <label>Town *:</label>
+      <!-- <input name="Town" #Town="ngModel" [(ngModel)]="service.inputCampaign.Town"> -->
+      <ng-multiselect-dropdown
+      [placeholder]="'choose city'"
+      [settings]="dropdownTownSettings"
+      [data]="dropdownTownList"
+      name="Town" 
+      #Town="ngModel" 
+      [(ngModel)]="service.inputCampaign.Town">
+    </ng-multiselect-dropdown>
+      <label>Radius:</label>
+      <input required name="Radius" #Radius="ngModel" [(ngModel)]="service.inputCampaign.Radius">
+      <label style="display: inline-block" class="sub">Status:</label>
+      <input style="display: inline-block" type="checkbox" name="Status" #Status="ngModel" [(ngModel)]="service.inputCampaign.Status">
+      <p>* optional field</p>
+      <br>
+      <button type="submit" [disabled]="form.invalid">Submit</button>
+    </div>
+
+  </form>
+</div>
+

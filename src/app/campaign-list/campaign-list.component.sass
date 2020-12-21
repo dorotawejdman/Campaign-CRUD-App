@@ -1,0 +1,49 @@
+@import '../../variables'
+.campaign-list
+    display: flex
+    flex-flow: row wrap
+
+.campaign-item
+    i
+        font-size:.8rem
+    p
+        margin: 3px
+    .campaign-btn
+        position: absolute
+        right: 5px
+        top: 5px
+        @extends %flex-basic
+    button
+        margin: 5px
+        width: 23px
+        height: 23px
+        padding: 2px
+        border: none
+        border-radius: $radius
+        &:hover
+            background-color: $active
+            border: none
+
+    position: relative
+    background-color: $brighten
+    width: 32%
+    min-width: 260px
+    border: 1px solid $main-light
+    border-radius: $radius
+    padding: 10px
+    font-size: 1.1rem
+    margin: 1%
+    
+
+    @media (max-width: 1290px) and (min-width: 870px)
+        &:nth-child(2n-1)
+            margin-left: 0
+        &:nth-child(2n)
+            margin-right: 0
+    @media (min-width: 1302px) 
+        &:nth-child(3n-2)
+            margin-left: 0
+        &:nth-child(3n)
+            margin-right: 0
+    @media (max-width: 1302px) 
+        margin-left: 0

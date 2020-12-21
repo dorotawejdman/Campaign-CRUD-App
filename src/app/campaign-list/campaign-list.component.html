@@ -1,0 +1,22 @@
+
+  <h2>Campaigns List</h2>
+  <div class="campaign-list">
+
+    <div class="campaign-item" *ngFor="let item of service.campaigns">
+      <h3>{{item.Name}}</h3>
+      <hr>
+      <p><strong>Keywords:</strong> </p>
+      <p *ngFor="let word of item.Keywords" class="keyword" style="display:inline-block">{{word}}; </p>
+      <p><strong>Bid Amount:</strong> {{item.BidAmount}} $</p>
+      <p><strong>Fund:</strong> {{item.CampaignFund}} $</p>
+      <p *ngIf="item.Town"><strong>Town:</strong> {{item.Town}}</p>
+      <p *ngIf="item.Radius"><strong>Radius:</strong> {{item.Radius}} km</p>
+      <p *ngIf="item.Status"><strong>Status:</strong> on</p>
+      <p *ngIf="!item.Status"><strong>Status:</strong> off</p>
+      <section class="campaign-btn">
+        <button (click)="editCampaign(item)"><i class="fas fa-edit"></i></button>
+        <button (click)="deleteCampaign(item)"><i class="fas fa-trash-alt"></i></button>
+      </section>
+    </div>
+  </div>
+  
